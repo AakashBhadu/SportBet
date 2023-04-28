@@ -7,7 +7,7 @@ module.exports = {
         protocol: 'https',
         hostname: 'dashboard.api-football.com',
         port: '',
-        pathname: '/public/img/small/*',
+        pathname: '/public/img/small/**',
       }
     ]
   }
