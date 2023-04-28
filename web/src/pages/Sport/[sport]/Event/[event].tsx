@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
 import { ReactElement, useEffect, useState, MouseEvent} from "react";
-import { SportLayout } from "../../../../components/Layouts/SportLayout";
-import { TopLayout } from "../../../../components/Layouts/TopLayout";
-import { Loader } from "../../../../components/Loader";
-import { SportViewer } from "../../../../components/SportViewer/SportViewer";
-import {NextPageWithLayout} from "../../../_app";
-import api from "../../../../Commons/api";
-import { Refresh } from "../../../../components/Refresh";
+import { SportLayout } from "@/components/Layouts/SportLayout";
+import { TopLayout } from "@/components/Layouts/TopLayout";
+import { Loader } from "@/components/Loader";
+import { SportViewer } from "@/components/SportViewer/SportViewer";
+import { NextPageWithLayout } from "@/pages/_app";
+import api from "@/Commons/api";
+import { Refresh } from "@/components/Refresh";
 
 interface SportEvent {
     name: string

@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 
 const Home: NextPage = () => {
@@ -10,14 +9,13 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if(router.isReady) {
-      router.push("/Sport", undefined, {shallow: true});
+      router.push("/Sport", undefined);
     }
   }, []);
 
 
   return (
-    <>
-    </>
+    <></>
   )
 }
 
