@@ -7,8 +7,9 @@ import { AccountView } from '../AccountView'
 export const TopLayout = ({children}:PropsWithChildren) => {
 
     let [expandSearch, setExpandSearch] = useState(false);
+    let [open, setOpen] = useState(false);
     let searchStyle = "w-96 h-10 pl-2 outline-none hidden border rounded md:block"
-    let expandSearchStyle = "w-full h-10 pl-2 outline-none block border rounded md:w-64"
+    let expandSearchStyle = "w-full h-10 pl-2 outline-none block border rounded md:w-96"
     
     return (
         <div className="flex min-h-screen flex-col items-center justify-center">
@@ -18,7 +19,10 @@ export const TopLayout = ({children}:PropsWithChildren) => {
         </Head>
   
         <header className="flex h-16 items-center px-2 justify-between bg-blue-800 w-full">
-          <div className={`font-medium ${expandSearch && "hidden"} text-2xl text-white md:block`}>
+          <div className={` bg-blue-500 rounded-full p-2 ml-2 ${expandSearch ? "hidden" : "block"} md:block xl:hidden`} onClick={() => setOpen(open => !open)}>
+            <p className=' text-white font-semibold text-xl'>RD</p>
+          </div>
+          <div className={`font-medium ${expandSearch && "hidden"} text-2xl ml-2 text-white md:block md:ml-4 md:flex-1`}>
             SportBet
           </div>
           <div 
@@ -26,10 +30,7 @@ export const TopLayout = ({children}:PropsWithChildren) => {
           >
             <h1 
               className={`w-12 h-full font-bold text-red-600 text-xl text-center ${expandSearch ? "block" : "hidden"} md:hidden`}
-              onClick={() => setExpandSearch(false)}
-            >
-              X
-            </h1>
+              onClick={() => setExpandSearch(false)}>X</h1>
             <input 
               className={expandSearch ? expandSearchStyle : searchStyle} 
               placeholder="search for events..." 
@@ -48,7 +49,7 @@ export const TopLayout = ({children}:PropsWithChildren) => {
   
         <main className="flex w-full flex-1 flex-row text-center bg-white">
           {children}
-          <AccountView />
+          <AccountView open={open} />
         </main>
   
         <footer className="flex h-24 w-full items-center justify-center border-t bg-indigo-800">
