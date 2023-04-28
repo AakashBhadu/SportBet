@@ -1,8 +1,10 @@
 import * as React from "react";
 
-export const AccountView = () => {
+export const AccountView = ({open}: {open: boolean}) => {
     return (
-        <div className="hidden flex-none w-[32rem] border-l-2 border-t-cyan-900 border-solid xl:block">
+        <div className={`h-[calc(100vh-10rem)] flex-none border-violet-800 bg-white
+                        ${open ? "block absolute w-full md:w-[30rem] md:border-r" :"hidden"} 
+                        xl:block xl:static xl:w-[30rem] xl:border-l xl:border-r-0`}>
             <div className="flex flex-row justify-between font-semibold text-sm text-white">
                 <div className=" flex-grow bg-slate-600 py-[13px]">
                     My Bets
