@@ -22,7 +22,7 @@ export const SportItem = memo((sportItem: SportItem) => {
                 as={aspath}
                 className={`flex flex-row flex-wrap ${sportItem.isClicked && clickStyle} items-center justify-center gap-2 cursor-pointer px-4 py-2 hover:bg-slate-500`}
             >
-                <Image src={sportItem.url} alt="image error" width={28} height={28} />
+                <Image src={sportItem.url} alt="" width={28} height={28} />
                 <div>{sportItem.name}</div>
             </Link>
     )

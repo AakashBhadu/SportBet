@@ -3,17 +3,19 @@ import { PropsWithChildren, memo, useEffect, useState } from "react"
 import { SportItem } from "../SportIem";
 import { SportListViewNav } from "../SportListViewNav";
 
+const imagePath = "https://dashboard.api-football.com/public/img/small/";
+
 const SportInitializeData = [
-    ["Football", "/images/hero-banner.png"],
-    ["Vollyeball", "/images/min-volleyball.png"],
-    ["Formula-1", "/images/f1-mini.png"],
-    ["Handball", "/images/min-handball.png"],
-    ["Hockey", "/images/min-hockey.png"],
-    ["Basketball", "/images/min-basketball.png"],
-    ["NBA", "/images/min-nba.png"],
-    ["Baseball", "/images/baseball-logo.png"],
-    ["Rugby", "/images/min-rugby.png"],
-    ["NFL", "/images/min-nfl.png"]
+    ["Football", "hero-banner.png"],
+    ["Vollyeball", "min-volleyball.png"],
+    ["Formula-1", "f1-mini.png"],
+    ["Handball", "min-handball.png"],
+    ["Hockey", "min-hockey.png"],
+    ["Basketball", "min-basketball.png"],
+    ["NBA", "min-nba.png"],
+    ["Baseball", "baseball-logo.png"],
+    ["Rugby", "min-rugby.png"],
+    ["NFL", "min-nfl.png"]
 ];
 
 export const SportLayout = ({children}:PropsWithChildren) => {
@@ -34,7 +36,7 @@ export const SportLayout = ({children}:PropsWithChildren) => {
                         return(
                             <SportItem 
                                 name={Data[0]} 
-                                url={Data[1]} 
+                                url={imagePath + Data[1]} 
                                 pathName={router.pathname}
                                 isClicked={Data[0] == currentSport} 
                                 key={index}
