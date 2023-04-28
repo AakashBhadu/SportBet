@@ -4,7 +4,7 @@ import { SportItem } from "../SportIem";
 import { SportListViewNav } from "../SportListViewNav";
 
 const SportInitializeData = [
-    ["Football", "/images/hero-banner.png"],
+    ["Football", "/hero-banner.png"],
     ["Vollyeball", "/images/min-volleyball.png"],
     ["Formula-1", "/images/f1-mini.png"],
     ["Handball", "/images/min-handball.png"],
