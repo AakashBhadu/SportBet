@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { PropsWithChildren, useState } from "react"
-import { AccountView } from '../AccountView'
+import { AccountView } from '../Account/AccountView'
 
 
 export const TopLayout = ({children}:PropsWithChildren) => {

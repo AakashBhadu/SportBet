@@ -13,7 +13,7 @@ const SportItem: NextPageWithLayout = () => {
             router.push({
                 pathname: "/Sport/[sport]/Event/Popular Events", 
                 query: { sport: router.query.sport }
-            }, undefined, {shallow: true});
+            });
         }
     })
 
